@@ -1,12 +1,13 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateMarkdown = require ('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: "input",
         name: "Title",
-        message: "What is the name of your project? (Required)",
+        message: "What is the name of your project? (Required):",
         validate: (projectInput) => {
           if (projectInput) {
             return true;
@@ -19,7 +20,7 @@ const questions = [
       {
         type: "input",
         name: "github",
-        message: "Enter your GitHub Username (Required)",
+        message: "Enter your GitHub Username (Required):",
         validate: (githubInput) => {
           if (githubInput) {
             return true;
@@ -32,7 +33,7 @@ const questions = [
       {
         type: "input",
         name: "email",
-        message: "What is your email address?",
+        message: "What is your email address?:",
       },
       {
         type: "input",
@@ -42,29 +43,29 @@ const questions = [
       {
         type: "input",
         name: "installation",
-        message: "Any necessary information needed about using this project?",
+        message: "Any necessary information needed about using this project?:",
       },
       {
         type: "input",
         name: "usage",
-        message: "Should user be aware of anything specific before downloading?",
+        message: "Should user be aware of anything specific before downloading?:",
       },
       {
         type: "input",
         name: "contribute",
         message:
-          "Any neccesary information needed about contributing to this project?",
+          "Any neccesary information needed about contributing to this project?:",
       },
       {
         type: "input",
         name: "test",
-        message: "Any necessary information about how to test this project?",
+        message: "Any necessary information about how to test this project?:",
       },
       {
         type: "list",
         name: "license",
         message: "Choose license for your project:",
-        choices: [""],
+        choices: ['Apache', 'WordPress', 'MIT', 'NPM Packages'],
       }
 ];
 
@@ -78,7 +79,12 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then((Answers) => {
+        writeToFile('README.md', generateMarkdown(Answers));
+    })
+}
 
 // Function call to initialize app
 init();

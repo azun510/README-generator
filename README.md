@@ -14,3 +14,6 @@
 ### Link to the repo
 
 https://azun510.github.io/portfolio-generator1/
+
+## Link to Video
+https://drive.google.com/file/d/10qZc1LyxZBdw_PlZ3ubArJRpTS2sLTrG/view

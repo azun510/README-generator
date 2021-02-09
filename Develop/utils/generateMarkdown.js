@@ -26,7 +26,7 @@ function generateMarkdown(data) {
   * [Tests](#tests)
   * [License](#license)
   * [Questions](#questions)
-  * 
+  
   ## Installation
   To install necessary dependencies, run the following command:
   

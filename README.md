@@ -11,7 +11,7 @@
   
 ## Usage 
 
-### Link to the repo
+### Link
 
 https://azun510.github.io/portfolio-generator1/
 

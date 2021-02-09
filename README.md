@@ -17,3 +17,4 @@ https://azun510.github.io/portfolio-generator1/
 
 ## Link to Video
 <iframe src="https://drive.google.com/file/d/10qZc1LyxZBdw_PlZ3ubArJRpTS2sLTrG/preview" width="640" height="480"></iframe>
+https://drive.google.com/file/d/10qZc1LyxZBdw_PlZ3ubArJRpTS2sLTrG/view
